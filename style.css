@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  animation: moveImg 2s ease-in-out, radiusImg 1s 2s forwards;
+}
+
+@keyframes moveImg {
+  0% {
+    opacity: 0;
+    transform: translate(100vw, 100vh);
+  }
+  40% {
+    transform: translatex(-200px) scale(2);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes radiusImg {
+  0% {
+    transform: scale(1.5);
+  }
+  40% {
+    transform: scale(1.7);
+  }
+  100% {
+    transform: scale(2);
+    border-radius: 50%;
+  }
+}
